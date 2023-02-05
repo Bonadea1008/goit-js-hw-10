@@ -39,7 +39,7 @@ function showCountryInfo(countries) {
 function renderCountryItem(country) {
   const markup = country
     .map(el => {
-      return `<li class="country-item">
+      return `<li class="country-info__item">
             <img src="${el.flags.svg}" alt="${el.name.official}" width="40" height="20" />
             <p>${el.name.official}</p>
             </li>`;
@@ -55,21 +55,21 @@ function renderCountryCard(country) {
       return `<h1>
        <img src="${el.flags.svg}" alt="${
         el.name.official
-      }" width="40" height="20" />
+      }" width="60" height="30" />
 
         ${el.name.official}
       </h1>
-      <ul class="country-info_list">
-        <li class="country-info_item">
-          <h2>Capital:</h2>
+      <ul class="country-info__list">
+        <li class="country-info__item">
+          <h2 class="country-info__title">Capital:</h2>
           <p>${el.capital}</p>
         </li>
-        <li class="country-info_item">
-          <h2>Population:</h2>
+        <li class="country-info__item">
+          <h2 class="country-info__title">Population:</h2>
           <p>${el.population}</p>
         </li>
-        <li class="country-info_item">
-          <h2>Languages:</h2>
+        <li class="country-info__item">
+          <h2 class="country-info__title">Languages:</h2>
           <p>${Object.values(el.languages).join(', ')}</p>
         </li>
       </ul>`;
